@@ -1,0 +1,10 @@
+.line {
+  width: calc(100% - 3rem);
+  height: 2px;
+}
+
+@media (min-width: 767px) {
+  .line {
+    display: none;
+  }
+} ;
