@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/Header';
@@ -11,10 +11,9 @@ function App() {
       <Header />
       <main className="max-w-screen-2xl  m-auto">
         <Routes>
-          <Route path="home" elment={<ListView />} />
+          <Route path="/" elment={<ListView />} />
           <Route path="job" element={<JobView />} />
         </Routes>
-        <ListView />
       </main>
     </div>
   );
