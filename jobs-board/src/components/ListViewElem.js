@@ -4,14 +4,13 @@ import { Link } from 'react-router-dom';
 const ListViewElem = ({ elem }) => {
   return (
     <>
-      <Link to="jobs/job">
+      <Link to={`/jobs/${elem.id}`} key={elem.id} props={elem}>
         <div
           className={
             elem.featured
               ? 'border-l-4 border-teal-500 px-4 py-4 md:py-8 bg-white shadow-lg shadow-black-500 mr-8 ml-8 mt-8 mb-20 md:mb-8 flex  flex-col md:flex-row rounded-md'
               : 'p-4 bg-white shadow-lg shadow-black-500 mr-8 ml-8 mt-8 mb-20 md:mb-8 flex  flex-col md:flex-row rounded-md'
           }
-          key={elem.id}
         >
           <div className="flex flex-col md:flex-row md:basis-1/2 relative md:align-center">
             <div className="max-w-4 absolute -top-20 md:basis-1/4 md:top-0 md:relative md:align-center">
