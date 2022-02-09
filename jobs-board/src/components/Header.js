@@ -15,8 +15,7 @@ const Header = (props) => {
     >
       <nav>
         <ul>
-          <Link to="/">Home</Link>
-          <Link to="profile">Profile</Link>
+          <Link to="/">Home</Link> <Link to="profile">Profile</Link>{' '}
         </ul>
       </nav>
     </header>

@@ -4,18 +4,23 @@ import './App.css';
 import Header from './components/Header';
 import ListView from './components/ListView';
 import JobView from './components/JobView';
+import Profile from './components/Profile';
 
 function App() {
   return (
-    <div className="bg-teal-50">
-      <Header />
-      <main className="max-w-screen-2xl  m-auto">
+    <BrowserRouter>
+      <div className="bg-teal-50">
+        <Header />
         <Routes>
-          <Route path="/" elment={<ListView />} />
-          <Route path="job" element={<JobView />} />
+          <Route index element={<ListView />} />{' '}
+          <Route path="jobs" elemlent={<ListView />}>
+            <Route path=":jobId" element={<JobView />} />
+          </Route>
+          <Route path="/profile" element={<Profile />} />
         </Routes>
-      </main>
-    </div>
+        <Outlet />
+      </div>
+    </BrowserRouter>
   );
 }
 

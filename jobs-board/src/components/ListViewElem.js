@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ListViewElem = ({ elem }) => {
   return (
     <>
-      <Link to="/job">
+      <Link to="jobs/job">
         <div
           className={
             elem.featured
